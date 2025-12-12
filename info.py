@@ -16,7 +16,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '21419016'))
 API_HASH = environ.get('API_HASH', '79198e1eb4cfd0f771a89d83b9144e7e')
-BOT_TOKEN = environ.get('BOT_TOKEN', '8337068928:AAFAvGMv0tTqDOMBFN8AKwuZc742WQMAKaw')
+BOT_TOKEN = environ.get('BOT_TOKEN', '8574102205:AAH-2auQLqWVz4oUkJikFPKiOjjDc-I0dFY')
 
 # Bot settings
 BOT_START_TIME = time()
@@ -46,7 +46,7 @@ REQ_CHANNEL = (int(REQ_CHANNEL) if REQ_CHANNEL and id_pattern.search(REQ_CHANNEL
 JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002957056021'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1003132292615'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'mazhavil_bots')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', 'False')), False)
 IMDB = is_enabled((environ.get('IMDB', 'False')), False)
