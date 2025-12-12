@@ -1,4 +1,4 @@
-git+https://github.com/GouthamSER/cinemagoer
+git+https://github.com/cinemagoer/cinemagoer
 pyrofork==2.3.45
 tgcrypto
 pymongo[srv]==3.12.3 
