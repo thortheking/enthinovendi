@@ -1,37 +1,31 @@
 import logging
 import logging.config
+import tgcrypto
+import asyncio
+import pytz
+from pyrogram import Client, __version__, types, utils as pyroutils
+from pyrogram.raw.all import layer
+from database.ia_filterdb import Media
+from database.users_chats_db import db
+from database.join_reqs import JoinReqs
+from info import *
+from utils import *
+from typing import Union, Optional, AsyncGenerator
+from Script import script
+from plugins.webcode import bot_run
+from aiohttp import web as webserver
+from os import environ
+from datetime import date, datetime
 
-# Get logging configurations
+
 logging.config.fileConfig('logging.conf')
 logging.getLogger().setLevel(logging.INFO)
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
 logging.getLogger("imdbpy").setLevel(logging.ERROR)
+logging.getLogger("asyncio").setLevel(logging.CRITICAL - 1)
 
-# for prevent stoping the bot after 1 week
-logging.getLogger("asyncio").setLevel(logging.CRITICAL -1)
-import tgcrypto
-from pyrogram import Client, __version__
-from pyrogram.raw.all import layer
-from database.ia_filterdb import Media
-from database.users_chats_db import db
-from info import SESSION, API_ID, API_HASH, BOT_TOKEN, LOG_STR, LOG_CHANNEL, REQ_CHANNEL 
-from utils import temp
-from typing import Union, Optional, AsyncGenerator
-from pyrogram import types
-from Script import script
-import asyncio
-from datetime import date, datetime
-from database.join_reqs import JoinReqs 
-import pytz
-
-# peer id invaild fixxx
-from pyrogram import utils as pyroutils
 pyroutils.MIN_CHAT_ID = -999999999999
 pyroutils.MIN_CHANNEL_ID = -100999999999999
-
-from plugins.webcode import bot_run
-from os import environ
-from aiohttp import web as webserver
 
 class Bot(Client):
 
