@@ -16,7 +16,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', '21419016'))
 API_HASH = environ.get('API_HASH', '79198e1eb4cfd0f771a89d83b9144e7e')
-BOT_TOKEN = environ.get('BOT_TOKEN', '8574102205:AAH-2auQLqWVz4oUkJikFPKiOjjDc-I0dFY')
+BOT_TOKEN = environ.get('BOT_TOKEN', '8366640146:AAEKQ-s2iMjWXz6_XEA0it4iFB01PafqOg8')
 
 # Bot settings
 BOT_START_TIME = time()
@@ -41,12 +41,12 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'mazhavil_collection')
 auth_channel = environ.get('AUTH_CHANNEL')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 # Set to False inside the bracket if you don't want to use Request Channel else set it to Channel ID
-REQ_CHANNEL=environ.get("REQ_CHANNEL", "-1002772960825")
+REQ_CHANNEL=environ.get("REQ_CHANNEL", "-1002607101091")
 REQ_CHANNEL = (int(REQ_CHANNEL) if REQ_CHANNEL and id_pattern.search(REQ_CHANNEL) else False) if REQ_CHANNEL is not None else None
 JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1003132292615'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002772960825'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'mazhavil_bots')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', 'False')), False)
 IMDB = is_enabled((environ.get('IMDB', 'False')), False)
